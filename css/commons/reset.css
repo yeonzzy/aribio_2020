@@ -1,0 +1,38 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    /*텍스트 드래그방지*/
+    -moz-user-select: -moz-none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+    user-select:none;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+main, section, article, aside, nav {
+    display: none;
+}
+
+img {
+    display: none;
+}
+
+body, h1, h2, h3, h4, h5, h6, li, p, span, div 
+{font-family: 'Roboto', sans-serif;}
