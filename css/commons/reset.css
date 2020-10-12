@@ -27,12 +27,13 @@ a {
 }
 
 main, section, article, aside, nav {
-    display: none;
+    display: block;
 }
 
 img {
-    display: none;
+    display: block;
 }
 
-body, h1, h2, h3, h4, h5, h6, li, p, span, div 
-{font-family: 'Roboto', sans-serif;}
+/* body, h1, h2, h3, h4, h5, h6, li, p, span, div {
+    font-family: 'Roboto', sans-serif;
+} */

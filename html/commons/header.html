@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>aribio</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
     <link rel="stylesheet" href="../../css/commons/reset.css">
     <link rel="stylesheet" href="../../css/commons/header.css">
     <script src="../../js/commons/jquery-3.5.1.min.js"></script>
@@ -13,7 +14,7 @@
         <div class="header">
             <div class="inner-header">
                 <div class="logo">
-                    <img src="../../img/commons/header/logo.png" alt="logo">
+                    <a href="../../index.html"><img src="../../img/commons/header/logo.png" alt="logo"></a>
                 </div>
                 <div class="gnb">
                     <ul>
@@ -75,141 +76,21 @@
                 <div class="lang">
                     <div class="inner-lang">
                         <div class="lang-txt">KR</div>
+                        
                         <div class="lang-btn">∨</div>
+                    </div>
+                    <div class="langMenu">
+                        <ul>
+                            <li>KR</li>
+                            <li>EN</li>
+                            <li>CN</li>
+                        </ul>
                     </div>
                 </div>
             </div>
             <div class="subMenuBox"></div>
         </div>
-        <script>
-                //gnb a태그 마우스 들어오면 서브메뉴 활성화
-                var gnbLi = $('.gnb>ul>li>a');
-                gnbLi.on('mouseenter', subMenuShow);
-
-                function subMenuShow() {
-                    $('.subMenu').slideDown();
-                    $('.subMenuBox').slideDown();
-                }
-
-                //gnb에서 마우스 나가면 서브메뉴 활성화
-                $('.gnb').on('mouseleave', subMenuHide);
-                function subMenuHide() {
-                    $('.subMenu').stop().slideUp();
-                    $('.subMenuBox').stop().slideUp();
-                }
-
-                var subUl = $('.subMenu>ul');
-                //for(var i=0; i<=4; i++){
-                //1.subMenu(1) hover 시 밑줄
-                subUl.eq(0).hover(
-                    function () {
-                        $('.gnb>ul>li').eq(0).css({ "border-bottom": '3px solid #0272aa' });
-                    },
-                    function () {
-                        $('.gnb>ul>li').eq(0).css({ "border-bottom": '0px solid #0272aa' });
-                    }
-                );
-                //2.subMenu(2) hover 시 밑줄
-                subUl.eq(1).hover(
-                    function () {
-                        $('.gnb>ul>li').eq(1).css({ "border-bottom": '3px solid #0272aa' });
-                    },
-                    function () {
-                        $('.gnb>ul>li').eq(1).css({ "border-bottom": '0px solid #0272aa' });
-                    }
-                );
-                //3.subMenu(3) hover 시 밑줄
-                subUl.eq(2).hover(
-                    function () {
-                        $('.gnb>ul>li').eq(2).css({ "border-bottom": '3px solid #0272aa' });
-                    },
-                    function () {
-                        $('.gnb>ul>li').eq(2).css({ "border-bottom": '0px solid #0272aa' });
-                    }
-                );
-                //4.subMenu(4) hover 시 밑줄
-                subUl.eq(3).hover(
-                    function () {
-                        $('.gnb>ul>li').eq(3).css({ "border-bottom": '3px solid #0272aa' });
-                    },
-                    function () {
-                        $('.gnb>ul>li').eq(3).css({ "border-bottom": '0px solid #0272aa' });
-                    }
-                );
-                //1.subMenu(5) hover 시 밑줄
-                subUl.eq(4).hover(
-                    function () {
-                        $('.gnb>ul>li').eq(4).css({ "border-bottom": '3px solid #0272aa' });
-                    },
-                    function () {
-                        $('.gnb>ul>li').eq(4).css({ "border-bottom": '0px solid #0272aa' });
-                    }
-                );
-            //}
-
-            //subMenu(1) > company hover
-            var subMenuA = $('.subMenu>ul>li>a');
-        //     subMenuA.eq(0).hover({
-        //         function() {
-        //             $(this).css({ color: "#00272aa" });
-        //         },
-        //         function() {
-        //             $(this).css({color:"#646464"});
-        //         }
-        //     }
-        // );
-
-            //subMenu(1) > sub 회사소개,연혁,CI hover 시 company 호버유지
-                subMenuA.eq(1).hover(
-                    function () {
-                        $(this).css({ "text-decoration": "underline" });
-                        subMenuA.eq(0).css({
-                            color: "#0272aa",
-                            "font-weight": "bold"
-                        });
-                    },
-                    function () {
-                        $(this).css({ "text-decoration": "none"  });
-                        subMenuA.eq(0).css({
-                            color: "#646464",
-                            "font-weight": "normal"
-                        });
-                    }
-                );
-                subMenuA.eq(2).hover(
-                    function () {
-                        $(this).css({ "text-decoration": "underline" });
-                        subMenuA.eq(0).css({
-                            color: "#0272aa",
-                            "font-weight": "bold"
-                        });
-                    },
-                    function () {
-                        $(this).css({ "text-decoration": "none" });
-                        subMenuA.eq(0).css({
-                            color: "#646464",
-                            "font-weight": "normal"
-                        });
-                    }
-                );
-                subMenuA.eq(3).hover(
-                    function () {
-                        $(this).css({ "text-decoration": "underline" });
-                        subMenuA.eq(0).css({
-                            color: "#0272aa",
-                            "font-weight": "bold"
-                        });
-                    },
-                    function () {
-                        $(this).css({ "text-decoration": "none" });
-                        subMenuA.eq(0).css({
-                            color: "#646464",
-                            "font-weight": "normal"
-                        });
-                    }
-                );
-
-        </script>
+        <script type="text/javascript" src="../../js/commons/header/header.js"></script>
     </div>
 </body>
 </html>
